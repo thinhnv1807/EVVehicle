@@ -40,4 +40,12 @@ Window {
         _speed_opacity_text: _main_opacity_text
     }
 
+    Image {
+        id: i
+        source: "qrc:/image/btn.png"
+        height: sourceSize.height
+        width: sourceSize.width
+        anchors.centerIn: parent
+    }
+
 }
