@@ -1,8 +1,8 @@
 <RCC>
     <qresource prefix="/">
         <file>main.qml</file>
-        <file>Battery.qml</file>
         <file>MainScreen.qml</file>
         <file>Speed.qml</file>
+        <file>common/Battery.qml</file>
     </qresource>
 </RCC>

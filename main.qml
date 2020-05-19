@@ -1,5 +1,6 @@
 import QtQuick 2.12
 import QtQuick.Window 2.12
+import "common"
 
 Window {
     visible: true
@@ -38,14 +39,6 @@ Window {
         y: 60
         _speed_color_component: _main_colorComponent
         _speed_opacity_text: _main_opacity_text
-    }
-
-    Image {
-        id: i
-        source: "qrc:/image/btn.png"
-        height: sourceSize.height
-        width: sourceSize.width
-        anchors.centerIn: parent
     }
 
 }
