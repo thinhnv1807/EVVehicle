@@ -47,22 +47,9 @@ Item {
         anchors.left: parent.left
     }
 
-//    Text {
-//        id: timer
-//        text: "13:00"
-//        font.family: "Arial Black"
-//        verticalAlignment: Text.AlignVCenter
-//        horizontalAlignment: Text.AlignHCenter
-//        font.pixelSize: 35
-//        color: _scr_color_component
-//        opacity: 0.9
-//        anchors.horizontalCenter: status_bar.horizontalCenter
-//        anchors.verticalCenter: status_bar.verticalCenter
-//    }
-
     Image {
-        id: gear
-        source: "qrc:/image/Asset 7.png"
+        id: setting_item
+        source: "qrc:/image/setting.png"
         height: sourceSize.height*0.7
         width: sourceSize.width*0.7
         anchors.horizontalCenter: status_bar.horizontalCenter

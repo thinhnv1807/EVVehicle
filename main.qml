@@ -21,17 +21,15 @@ Window {
         _scr_color_component:_main_colorComponent
     }
 
-    Battery{
+    BatteryType2{
         id: bat
-        x: 926
-        y: 50
-        height: 110
-        width: 302
-        _bat_value: 0.7
-        _bat_opacity: 0.5
-        _bat_color_component:"#D1D0D2"
-        _bat_color_value:"#3AF3A3"
+        width: 100
+        height: 250
+        anchors.verticalCenterOffset: 21
+        anchors.horizontalCenterOffset: 0
+        anchors.centerIn: parent
     }
+
 
     Speed{
         id:speed

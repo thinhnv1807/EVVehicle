@@ -2,7 +2,8 @@
     <qresource prefix="/">
         <file>main.qml</file>
         <file>MainScreen.qml</file>
-        <file>Speed.qml</file>
         <file>common/Battery.qml</file>
+        <file>common/BatteryType2.qml</file>
+        <file>common/Speed.qml</file>
     </qresource>
 </RCC>

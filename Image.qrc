@@ -1,7 +1,8 @@
 <RCC>
     <qresource prefix="/">
-        <file>image/btn.png</file>
-        <file>image/Asset 2.png</file>
-        <file>image/Asset 7.png</file>
+        <file>image/climate.png</file>
+        <file>image/seat.png</file>
+        <file>image/setting.png</file>
+        <file>image/weather.png</file>
     </qresource>
 </RCC>
