@@ -2,6 +2,8 @@ import QtQuick 2.12
 import QtQuick.Window 2.12
 import "common"
 
+
+
 Window {
     visible: true
     width: 1280
@@ -25,9 +27,8 @@ Window {
         id: bat
         width: 100
         height: 250
-        anchors.verticalCenterOffset: 21
-        anchors.horizontalCenterOffset: 0
-        anchors.centerIn: parent
+        x: 590
+        y: 166
     }
 
 
@@ -38,5 +39,11 @@ Window {
         _speed_color_component: _main_colorComponent
         _speed_opacity_text: _main_opacity_text
     }
+
+
+
+Component.onCompleted: {
+    console.log("thinh")
+}
 
 }

@@ -7,6 +7,7 @@ Item{
     property string  _speed_color_component: ""
     property double  _speed_opacity_text: 0
 
+
     Text {
         id: speed_val
         width: speed_val.contentWidth

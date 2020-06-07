@@ -24,7 +24,6 @@ Item {
         anchors.bottomMargin: 10
     }
 
-
     Rectangle{
         id: controll
         color: _scr_color_component
@@ -47,13 +46,45 @@ Item {
         anchors.left: parent.left
     }
 
-    Image {
-        id: setting_item
-        source: "qrc:/image/setting.png"
-        height: sourceSize.height*0.7
-        width: sourceSize.width*0.7
-        anchors.horizontalCenter: status_bar.horizontalCenter
-        anchors.verticalCenter: status_bar.verticalCenter
+    ListModel{
+        id: model_source
+        ListElement{
+            themeSouce: "qrc:/image/setting.png"
+            isSource: true
+        }
+        ListElement{
+            themeSouce: "qrc:/image/weather.png"
+            isSource: true
+        }
+        ListElement{
+            themeSouce: "qrc:/image/seat.png"
+            isSource: true
+        }
+        ListElement{
+            themeSouce: "qrc:/image/climate.png"
+            isSource: true
+        }
+
     }
+
+    Row{
+        id: icon
+        x: 0
+        y: 460
+        height: 80
+        spacing: parent.width/model_source.count - 100
+        anchors.horizontalCenter: parent.horizontalCenter
+        Repeater{
+            model: model_source
+            Image {
+                source: themeSouce
+                height: sourceSize.height
+                width: sourceSize.width
+                anchors.verticalCenter: parent.verticalCenter
+                visible: isSource
+            }
+        }
+    }
+
 
 }
