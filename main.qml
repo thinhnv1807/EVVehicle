@@ -1,6 +1,8 @@
 import QtQuick 2.12
 import QtQuick.Window 2.12
 import "common"
+//import QtQml 2.15
+
 
 
 
@@ -13,6 +15,7 @@ Window {
     property double _main_opacity: 0.08
     property string _main_colorMain: "#2E2D2E"
     property string _main_colorComponent:"#D1D0D2"
+
 
     MainScreen{
         id:scr
@@ -39,6 +42,26 @@ Window {
         _speed_color_component: _main_colorComponent
         _speed_opacity_text: _main_opacity_text
     }
+
+    Text {
+        id: clok
+        text: myClockEV.timeH
+        anchors.verticalCenterOffset: 227
+        anchors.horizontalCenterOffset: 1
+        anchors.centerIn: parent
+        font.pixelSize: 30
+        color: "white"
+    }
+
+    Item {
+        Timer {
+            interval:1000; running: true; repeat: true
+            onTriggered: time.text = Date.
+        }
+
+        Text { id: time }
+    }
+
 
 
 

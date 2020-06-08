@@ -4,6 +4,7 @@
 #include <QDebug>
 #include <QQmlContext>
 #include "clockev.h"
+#include <QTime>
 
 int main(int argc, char *argv[])
 {
@@ -15,22 +16,14 @@ int main(int argc, char *argv[])
 
 
 
-    const QUrl url(QStringLiteral("qrc:/main.qml"));
-    QObject::connect(&engine, &QQmlApplicationEngine::objectCreated,
-                     &app, [url](QObject *obj, const QUrl &objUrl) {
-        if (!obj && url == objUrl)
-            QCoreApplication::exit(-1);
-    }, Qt::QueuedConnection);
-
-
+    QQmlContext *context = engine.rootContext();
     ClockEV clockev;
-    QQmlContext *context = new QQmlContext(engine.rootContext());
+    qDebug() << clockev.getTimeH();
     context->setContextProperty("myClockEV", &clockev);
-    qDebug() << clockev.getHourClock();
+
+    const QUrl url(QStringLiteral("qrc:/main.qml"));
+
     engine.load(url);
-
-
-
 
     return app.exec();
 }

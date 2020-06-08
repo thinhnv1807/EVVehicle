@@ -2,7 +2,8 @@
 
 ClockEV::ClockEV(QObject *parent) : QObject(parent)
 {
-        m_hourClock = "--";
+
+    setTimeClock();
 }
 
 void ClockEV::setHourClock(QString data)
@@ -13,13 +14,29 @@ void ClockEV::setHourClock(QString data)
    emit hourClockChanged();
 }
 
-QString ClockEV::getHourClock()
+QString ClockEV::getHourClock() const
 {
     return m_hourClock;
 }
 
 void ClockEV::setTimeClock()
 {
-    QTime timeClock = QTime::currentTime();
-    setHourClock(timeClock.toString("hh:mm"));
+
+
+    setTimeH(timeClock.hour());
+
 }
+
+int ClockEV::getTimeH() const
+{
+    return m_TimeH;
+}
+
+void ClockEV::setTimeH(int data)
+{
+    if(data != m_TimeH){
+        m_TimeH = data;
+    }
+    emit timeHChanged();
+}
+
