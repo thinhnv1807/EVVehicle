@@ -4,5 +4,9 @@
         <file>image/seat.png</file>
         <file>image/setting.png</file>
         <file>image/weather.png</file>
+        <file>image/climate_p.png</file>
+        <file>image/seat_p.png</file>
+        <file>image/setting_p.png</file>
+        <file>image/weather_p.png</file>
     </qresource>
 </RCC>

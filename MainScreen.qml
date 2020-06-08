@@ -29,7 +29,7 @@ Item {
         color: _scr_color_component
         opacity:_scr_opacity
         height: 440
-        width: 780
+        width: 490
         anchors.right: parent.right
         anchors.bottom: status_bar.top
         anchors.bottomMargin: 10
@@ -50,19 +50,23 @@ Item {
         id: model_source
         ListElement{
             themeSouce: "qrc:/image/setting.png"
+            themeSouce_p: "qrc:/image/setting_p.png"
             isSource: true
         }
         ListElement{
             themeSouce: "qrc:/image/weather.png"
+            themeSouce_p: "qrc:/image/weather_p.png"
             isSource: true
         }
 
         ListElement{
             themeSouce: "qrc:/image/seat.png"
+            themeSouce_p: "qrc:/image/seat_p.png"
             isSource: true
         }
         ListElement{
             themeSouce: "qrc:/image/climate.png"
+            themeSouce_p: "qrc:/image/climate_p.png"
             isSource: true
         }
 
@@ -73,16 +77,29 @@ Item {
         x: 0
         y: 460
         height: 80
-        spacing: parent.width/model_source.count - 100
+        spacing: 250
         anchors.horizontalCenter: parent.horizontalCenter
         Repeater{
             model: model_source
             Image {
+                id:img
                 source: themeSouce
                 height: sourceSize.height
                 width: sourceSize.width
                 anchors.verticalCenter: parent.verticalCenter
                 visible: isSource
+                MouseArea{
+                    anchors.fill: parent
+                    onPressed: {
+                        img.source = themeSouce_p
+                        console.log("button: ",  themeSouce_p)
+                    }
+                    onReleased: {
+
+                        img.source = themeSouce
+                        console.log("button: ",  themeSouce)
+                    }
+                }
             }
         }
     }

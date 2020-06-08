@@ -5,14 +5,14 @@ Item {
     width: 50
     height: 200
 
-    property double _bat_value: 1
+    property double _bat_value: myInforEV.Battery
     property double _bat_opacity: 0.5
     property string _bat_color_component:"#D1D0D2"
-    property string _bat_color_value:"#3AF3A3"
+    property string _bat_color_value:(_bat_value > 20) ? "#3AF3A3" : "red"
 
     Rectangle{
         id: bat_value
-        height: 122
+        height: (_bat_value/100)*bat_body.height - 5
         width: parent.width
         color: _bat_color_value
         anchors.bottom: parent.bottom

@@ -1,34 +1,35 @@
 #include "clockev.h"
 
-ClockEV::ClockEV(QObject *parent) : QObject(parent)
+clockEV::clockEV(QObject *parent) : QObject(parent)
 {
-    setTimeClock();
+    setTimeclock();
     setTimer();
 }
 
-void ClockEV::setClock(QString data)
+void clockEV::setClock(QString data)
 {
-    if(m_Clock != data){
-        m_Clock = data;
+    if(m_clock != data){
+        m_clock = data;
     }
-    emit ClockChanged();
+    emit clockChanged();
 }
 
-QString ClockEV::getClock() const
+QString clockEV::getClock() const
 {
-    return m_Clock;
+    return m_clock;
 }
 
-void ClockEV::setTimeClock()
+void clockEV::setTimeclock()
 {
-    timeClock = QTime::currentTime();
-    setClock(timeClock.toString("hh:mm"));
+    timeclock = QTime::currentTime();
+    setClock(timeclock.toString("hh:mm"));
+    qDebug() << "Clock " << timeclock.toString("hh:mm:ss");
 }
 
-void ClockEV::setTimer()
+void clockEV::setTimer()
 {
     timer1s.setInterval(1000);
-    QObject::connect(&timer1s, SIGNAL(timeout()), this, SLOT(setTimeClock()) );
+    QObject::connect(&timer1s, SIGNAL(timeout()), this, SLOT(setTimeclock()) );
     timer1s.start();
 }
 

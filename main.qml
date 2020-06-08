@@ -2,8 +2,6 @@ import QtQuick 2.12
 import QtQuick.Window 2.12
 import "common"
 
-
-
 Window {
     visible: true
     width: 1280
@@ -35,24 +33,18 @@ Window {
 
     Speed{
         id:speed
-        x: 548
-        y: 60
+        anchors.horizontalCenter: parent.horizontalCenter
+        y: 28
         _speed_color_component: _main_colorComponent
         _speed_opacity_text: _main_opacity_text
     }
 
-    Text {
-        id: clok
-        text: myClockEV.Clock
-        anchors.verticalCenterOffset: 227
-        anchors.horizontalCenterOffset: 1
-        anchors.centerIn: parent
-        font.pixelSize: 30
-        color: "white"
+
+    ClockVehicle{
+        id:clock
+        anchors.horizontalCenter: parent.horizontalCenter
+        y: 482
     }
-
-
-
 
 
 
