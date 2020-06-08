@@ -1,7 +1,6 @@
 #include <QGuiApplication>
 #include <QQmlApplicationEngine>
 #include <QTimer>
-#include <QDebug>
 #include <QQmlContext>
 #include "clockev.h"
 #include <QTime>
@@ -14,12 +13,9 @@ int main(int argc, char *argv[])
     QGuiApplication app(argc, argv);
     QQmlApplicationEngine engine;
 
-
-
     QQmlContext *context = engine.rootContext();
-    ClockEV clockev;
-    qDebug() << clockev.getTimeH();
-    context->setContextProperty("myClockEV", &clockev);
+    ClockEV clockEV;
+    context->setContextProperty("myClockEV", &clockEV);
 
     const QUrl url(QStringLiteral("qrc:/main.qml"));
 

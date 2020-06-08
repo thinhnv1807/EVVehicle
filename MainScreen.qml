@@ -56,6 +56,7 @@ Item {
             themeSouce: "qrc:/image/weather.png"
             isSource: true
         }
+
         ListElement{
             themeSouce: "qrc:/image/seat.png"
             isSource: true

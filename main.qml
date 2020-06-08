@@ -1,8 +1,6 @@
 import QtQuick 2.12
 import QtQuick.Window 2.12
 import "common"
-//import QtQml 2.15
-
 
 
 
@@ -45,7 +43,7 @@ Window {
 
     Text {
         id: clok
-        text: myClockEV.timeH
+        text: myClockEV.Clock
         anchors.verticalCenterOffset: 227
         anchors.horizontalCenterOffset: 1
         anchors.centerIn: parent
@@ -53,14 +51,7 @@ Window {
         color: "white"
     }
 
-    Item {
-        Timer {
-            interval:1000; running: true; repeat: true
-            onTriggered: time.text = Date.
-        }
 
-        Text { id: time }
-    }
 
 
 

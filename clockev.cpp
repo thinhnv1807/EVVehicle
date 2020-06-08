@@ -2,41 +2,35 @@
 
 ClockEV::ClockEV(QObject *parent) : QObject(parent)
 {
-
     setTimeClock();
+    setTimer();
 }
 
-void ClockEV::setHourClock(QString data)
+void ClockEV::setClock(QString data)
 {
-   if(m_hourClock != data){
-       m_hourClock = data;
-   }
-   emit hourClockChanged();
+    if(m_Clock != data){
+        m_Clock = data;
+    }
+    emit ClockChanged();
 }
 
-QString ClockEV::getHourClock() const
+QString ClockEV::getClock() const
 {
-    return m_hourClock;
+    return m_Clock;
 }
 
 void ClockEV::setTimeClock()
 {
-
-
-    setTimeH(timeClock.hour());
-
+    timeClock = QTime::currentTime();
+    setClock(timeClock.toString("hh:mm"));
 }
 
-int ClockEV::getTimeH() const
+void ClockEV::setTimer()
 {
-    return m_TimeH;
+    timer1s.setInterval(1000);
+    QObject::connect(&timer1s, SIGNAL(timeout()), this, SLOT(setTimeClock()) );
+    timer1s.start();
 }
 
-void ClockEV::setTimeH(int data)
-{
-    if(data != m_TimeH){
-        m_TimeH = data;
-    }
-    emit timeHChanged();
-}
+
 

@@ -3,37 +3,31 @@
 
 #include <QObject>
 #include <QTimer>
-#include <QDateTime>
 #include <QString>
 #include <QTime>
 class ClockEV : public QObject
 {
     Q_OBJECT
-    Q_PROPERTY(QString hourClock READ getHourClock WRITE setHourClock NOTIFY hourClockChanged)
-    Q_PROPERTY(int timeH READ getTimeH WRITE setTimeH NOTIFY timeHChanged)
-
+    Q_PROPERTY(QString Clock READ getClock WRITE setClock NOTIFY ClockChanged)
 
 
 private:
-    QString m_hourClock;
-    int m_TimeH;
-    QTime timeClock = QTime::currentTime();
+    QString m_Clock = "--";
+    QTime   timeClock;
+    QTimer  timer1s;
 public:
     explicit ClockEV(QObject *parent = nullptr);
-    void setHourClock(QString data);
-    QString getHourClock()const;
-    void setTimeClock();
-
-    int  getTimeH() const;
-    void setTimeH(int data);
-
-
+    void     setClock(QString data);
+    QString  getClock()const;
 
 
 signals:
-    void hourClockChanged();
+    void ClockChanged();
 
-    void timeHChanged();
+public slots:
+     void   setTimeClock();
+     void   setTimer();
+
 };
 
 #endif // CLOCKEV_H
