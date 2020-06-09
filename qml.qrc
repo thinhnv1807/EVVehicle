@@ -1,10 +1,12 @@
 <RCC>
     <qresource prefix="/">
         <file>main.qml</file>
-        <file>MainScreen.qml</file>
         <file>common/Battery.qml</file>
         <file>common/BatteryType2.qml</file>
         <file>common/Speed.qml</file>
         <file>common/ClockVehicle.qml</file>
+        <file>common/MainScreen.qml</file>
+        <file>screen/ScreenHome.qml</file>
+        <file>common/MapEV.qml</file>
     </qresource>
 </RCC>

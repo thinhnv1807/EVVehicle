@@ -36,3 +36,5 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 HEADERS += \
     clockev.h \
     inforsystem.h
+
+DISTFILES +=

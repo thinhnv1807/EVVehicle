@@ -14,29 +14,6 @@ Item {
     }
 
     Rectangle{
-        id:navi
-        color: _scr_color_component
-        opacity: _scr_opacity
-        height: 440
-        width: 490
-        anchors.left: parent.left
-        anchors.bottom: status_bar.top
-        anchors.bottomMargin: 10
-    }
-
-    Rectangle{
-        id: controll
-        color: _scr_color_component
-        opacity:_scr_opacity
-        height: 440
-        width: 490
-        anchors.right: parent.right
-        anchors.bottom: status_bar.top
-        anchors.bottomMargin: 10
-
-    }
-
-    Rectangle{
         id: status_bar
         height: 80
         width: 1280
