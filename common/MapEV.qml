@@ -19,6 +19,9 @@ Item {
         center: QtPositioning.coordinate(21.028511, 105.804817) // hanoi
         zoomLevel: 17
         color: "#1ad6d6"
+        activeMapType: maptyle
+
+
     }
 
     Rectangle{

@@ -2,7 +2,7 @@ import QtQuick 2.0
 
 Item{
     id: speed
-    height:speed_val.font.pixelSize
+    height:speed_val.contentHeight
     width: speed_val.contentWidth + speed_unit.contentWidth + 6
     property string  _speed_color_component: ""
     property double  _speed_opacity_text: 0
@@ -10,16 +10,15 @@ Item{
 
     Text {
         id: speed_val
-        width: speed_val.contentWidth
         text: myInforEV.Speed
-        elide: Text.ElideNone
-        font.family: "Arial Black"
+        font.family: "Arial"
+        style: Text.Normal
         verticalAlignment: Text.AlignVCenter
         horizontalAlignment: Text.AlignHCenter
-        font.pixelSize: 100
+        font.pointSize: 100
         color: _speed_color_component
         opacity:_speed_opacity_text
-        anchors.verticalCenterOffset: -4
+        anchors.verticalCenterOffset: 0
         anchors.verticalCenter: parent.verticalCenter
         anchors.left: parent.left
         anchors.leftMargin: 0
@@ -27,14 +26,15 @@ Item{
 
     Text {
         id: speed_unit
-        height: 50
         text: "km/h"
         font.bold: true
-        font.family: "Courier"
+        font.pointSize: 50
+        style: Text.Normal
+        fontSizeMode: Text.FixedSize
+        font.family: "Arial"
         width: speed_unit.contentWidth
         verticalAlignment: Text.AlignBottom
         horizontalAlignment: Text.AlignLeft
-        font.pixelSize:speed_val.font.pixelSize*0.7
         color: _speed_color_component
         opacity:_speed_opacity_text
         anchors.verticalCenter: speed_val.verticalCenter

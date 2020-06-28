@@ -1,8 +1,8 @@
 import QtQuick 2.0
 
 Item {
-    width: 1280
-    height: 540
+    width: 910
+    height: 682
     property double _scr_opacity: 0.08
     property string _scr_olor_main: "#2E2D2E"
     property string _scr_color_component:"#D1D0D2"
@@ -16,11 +16,18 @@ Item {
     Rectangle{
         id: status_bar
         height: 80
-        width: 1280
+        width: 910
         color: _scr_color_component
         opacity: _scr_opacity
         anchors.bottom: parent.bottom
         anchors.left: parent.left
+    }
+
+
+    ClockVehicle{
+        id:clock
+        anchors.horizontalCenter: parent.horizontalCenter
+        anchors.verticalCenter: icon.verticalCenter
     }
 
     ListModel{
@@ -51,10 +58,9 @@ Item {
 
     Row{
         id: icon
-        x: 0
-        y: 460
+        anchors.bottom: parent.bottom
         height: 80
-        spacing: 250
+        spacing: 150
         anchors.horizontalCenter: parent.horizontalCenter
         Repeater{
             model: model_source
