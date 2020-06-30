@@ -2,15 +2,15 @@ import QtQuick 2.0
 
 Text {
     id: clok
-    property double _clock_opacity: 0.8
-    property string _clock_olor_main: "#2E2D2E"
-    property string _clock_color_component:"#D1D0D2"
+    property double _clock_opacity: themeEV.opacityText
+    property string _clock_olor_main: themeEV.colorMain1
+    property string _clock_color_component:themeEV.colorMain2
 
     text: myclockEV.clock
     font.wordSpacing: 1.1
     fontSizeMode: Text.FixedSize
     wrapMode: Text.NoWrap
-    font.family: "Arial"
+    font.family: themeEV.textFont
     font.bold: true
     style: Text.Normal
     verticalAlignment: Text.AlignVCenter

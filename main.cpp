@@ -4,6 +4,7 @@
 #include <QQmlContext>
 #include "clockev.h"
 #include "inforsystem.h"
+#include "themeclass.h"
 #include <QTime>
 
 int main(int argc, char *argv[])
@@ -18,9 +19,10 @@ int main(int argc, char *argv[])
     QQmlContext *context = engine.rootContext();
     clockEV clockEV;
     InforSystem inforEV;
-    context->setContextProperty("myclockEV", &clockEV);
-    context->setContextProperty("myInforEV", &inforEV);
-
+    Themeclass theme;
+    context->setContextProperty("myclockEV" , &clockEV);
+    context->setContextProperty("myInforEV" , &inforEV);
+    context->setContextProperty("themeEV", &theme);
 
     engine.load("qrc:/main.qml");
 

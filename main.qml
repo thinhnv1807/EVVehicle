@@ -4,7 +4,6 @@ import "common"
 
 
 Window {
-    visible: true
     maximumHeight: 682
     maximumWidth: 910
     minimumHeight: 682
@@ -12,9 +11,8 @@ Window {
     visibility: Window.FullScreen
     property double _main_opacity_text: 0.9
     property double _main_opacity: 0.05
-    property string _main_colorMain: "#2E2D2E"
-    property string _main_colorComponent:"#D1D0D2"
-
+    property string _main_colorMain: themeEV.colorMain1
+    property string _main_colorComponent:themeEV.colorMain2
 
     MainScreen{
         id:scr
@@ -23,13 +21,22 @@ Window {
         _scr_color_component:_main_colorComponent
     }
 
+
     Loader{
-        source: "qrc:/screen/ScreenHome.qml"
+        source: themeEV.screenEV
         width: 910
-        height: 682
+        height: 602
         anchors.top: parent.top
         anchors.left: parent.left
     }
+
+    ControlBar{
+        id:ctb
+        anchors.bottom: parent.bottom
+        anchors.left: parent.left
+    }
+
+
 
 Component.onCompleted: {
     console.log("run main")

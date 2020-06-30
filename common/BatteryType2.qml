@@ -19,11 +19,11 @@ Item {
         anchors.bottomMargin: bat_body.border.width
     }
 
-
     Rectangle {
         id: bat_body
         width: parent.width
         height: parent.height*0.8
+        radius: 2
         color: "#00000000"
         border.color:_bat_color_component
         border.width: 5
@@ -41,8 +41,5 @@ Item {
         anchors.bottomMargin:  -bat_body.border.width
         anchors.horizontalCenter: parent.horizontalCenter
     }
-
-
-
 
 }

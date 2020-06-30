@@ -16,7 +16,8 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
         clockev.cpp \
         inforsystem.cpp \
-        main.cpp
+        main.cpp \
+        themeclass.cpp
 
 RESOURCES += qml.qrc \
     Image.qrc
@@ -35,6 +36,7 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 
 HEADERS += \
     clockev.h \
-    inforsystem.h
+    inforsystem.h \
+    themeclass.h
 
 DISTFILES +=

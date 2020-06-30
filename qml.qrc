@@ -8,5 +8,8 @@
         <file>common/MainScreen.qml</file>
         <file>screen/ScreenHome.qml</file>
         <file>common/MapEV.qml</file>
+        <file>common/TextEV.qml</file>
+        <file>screen/ScreenClimate.qml</file>
+        <file>common/ControlBar.qml</file>
     </qresource>
 </RCC>
