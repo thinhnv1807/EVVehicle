@@ -12,33 +12,41 @@ Item {
     property string _home_colorMain: themeEV.colorMain1
     property string _home_colorComponent:themeEV.colorMain2
 
-    Rectangle{
-        id:infor
-        color: _home_colorComponent
-        opacity: _home_opacity
+    Item {
+        id: boxinfor
         height: 590
         width: 300
         anchors.left: parent.left
         anchors.top: parent.top
+        Rectangle{
+            id:infor
+            color: _home_colorComponent
+            opacity: _home_opacity
+            height: 590
+            width: 300
+        }
+
+        Speed{
+            id:speed
+            anchors.left: infor.left
+            anchors.leftMargin: (infor.width - width)/2
+            _speed_color_component: _home_colorComponent
+            _speed_opacity_text: _home_opacity_text
+        }
+
+        BatteryType2{
+            id: bat
+            width: 100
+            height: 250
+            anchors.top: parent.top
+            anchors.topMargin: 172
+            anchors.left: infor.left
+            anchors.leftMargin: 93
+        }
     }
 
-    Speed{
-        id:speed
-        anchors.left: infor.left
-        anchors.leftMargin: (infor.width - width)/2
-        _speed_color_component: _home_colorComponent
-        _speed_opacity_text: _home_opacity_text
-    }
 
-    BatteryType2{
-        id: bat
-        width: 100
-        height: 250
-        anchors.top: parent.top
-        anchors.topMargin: 172
-        anchors.left: infor.left
-        anchors.leftMargin: 93
-    }
+
 
     Rectangle{
         id: controll
