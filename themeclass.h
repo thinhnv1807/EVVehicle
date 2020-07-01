@@ -25,14 +25,18 @@ class Themeclass: public QObject
     QString colorMain1        () {return "#2E2D2E";}
     QString colorMain2        () {return "#D1D0D2";}
     QString textFont          () {return "Arial";}
+    /*------------------------------------screen size------------------------------------------*/
 
+    Q_PROPERTY(int fullScreenH           READ fullScreenH        )
+    Q_PROPERTY(int fullScreenW           READ fullScreenW        )
+
+    int fullScreenH(){return 682;}
+    int fullScreenW(){return 910;}
     /*-----------------------------------text font---------------------------------------------*/
 
     Q_PROPERTY(QString textFont   READ textFont  )
 
     /*-----------------------------------source image------------------------------------------*/
-
-
 
     QString m_screenEV = "qrc:/screen/ScreenHome.qml";
 

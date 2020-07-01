@@ -45,17 +45,25 @@ Item {
         }
     }
 
-
-
-
-    Rectangle{
-        id: controll
-        color: _home_colorComponent
-        opacity:_home_opacity
+    Item {
+        id: box2
         height: 590
         width: 595
         anchors.right: parent.right
         anchors.top: parent.top
+
+        Rectangle{
+            id: controll
+            color: _home_colorComponent
+            opacity:_home_opacity
+            height: 590
+            width: 595
+        }
+    }
+
+
+    Component.onCompleted: {
+
     }
 
 }
