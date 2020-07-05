@@ -4,12 +4,14 @@
 #include <QObject>
 #include <QTimer>
 #include <QDebug>
+#include <QList>
 
 class InforSystem : public QObject
 {
     Q_OBJECT
     Q_PROPERTY(int Speed READ getSpeed WRITE setSpeed NOTIFY speedChanged)
     Q_PROPERTY(int Battery READ getBattery WRITE setBattery NOTIFY batteryChanged)
+
 
 public:
     explicit InforSystem(QObject *parent = nullptr);
@@ -29,6 +31,7 @@ private:
     QTimer timerBattery;
     int temp = 20; //fake speed
     int temp1; // fake battery
+
 
 signals:
     void speedChanged();

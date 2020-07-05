@@ -9,6 +9,8 @@ Window {
     maximumWidth: 910
     minimumHeight: 682
     minimumWidth: 910
+    height: 682
+    width: 910
     visibility: Window.FullScreen
 
     MainScreen{
@@ -16,6 +18,7 @@ Window {
     }
 
     Loader{
+        id:load
         source: themeEV.screenEV
         width: 910
         height: 602
@@ -25,9 +28,11 @@ Window {
 
     ControlBar{
         id:ctb
-        anchors.bottom: parent.bottom
+        anchors.top: load.bottom
         anchors.left: parent.left
     }
+
+
 
 Component.onCompleted: {
     console.log("run main")

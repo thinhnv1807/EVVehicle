@@ -7,7 +7,7 @@ class Themeclass: public QObject
 {
     Q_OBJECT
     /*-----------------------------------Screen-------------------------------------------------*/
-    Q_PROPERTY(QString screenEV  READ screenEV WRITE  setScreenEV  NOTIFY  screenEVChanged  )
+    Q_PROPERTY(QString screenEV  READ screenEV WRITE  setScreenEV  NOTIFY  screenEVChanged)
 
 
     /*--------------------------------theme color and opacity----------------------------------*/

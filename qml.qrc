@@ -11,5 +11,6 @@
         <file>common/TextEV.qml</file>
         <file>screen/ScreenClimate.qml</file>
         <file>common/ControlBar.qml</file>
+        <file>common/AnimatorEV.qml</file>
     </qresource>
 </RCC>

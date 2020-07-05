@@ -6,6 +6,9 @@
 #include "inforsystem.h"
 #include "themeclass.h"
 #include <QTime>
+#include <QDir>
+#include <QList>
+#include <QDebug>
 
 int main(int argc, char *argv[])
 {
@@ -23,6 +26,7 @@ int main(int argc, char *argv[])
     context->setContextProperty("myclockEV" , &clockEV);
     context->setContextProperty("myInforEV" , &inforEV);
     context->setContextProperty("themeEV", &theme);
+
 
     engine.load("qrc:/main.qml");
 

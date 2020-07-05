@@ -1,4 +1,6 @@
 import QtQuick 2.0
+import QtMultimedia 5.0
+import "../common"
 
 
 
@@ -17,24 +19,35 @@ Item {
         clip: true
         snapMode: ListView.SnapOneItem
 
-        delegate: Rectangle{
+        highlight: Rectangle{height: dlg.height; width: dlg.width ; color: themeEV.colorMain2; opacity: 0.3}
+        highlightMoveDuration : 150
+        delegate: Item{
             id: dlg
             height: 100
             width: 300
-            color: (lsv.currentIndex == index) ? "red" : "green"
+            Rectangle{
+                id: r1
+                height: dlg.height
+                width: dlg.width
+                color: themeEV.colorMain2
+                opacity: (lsv.currentIndex == index) ? 0.5 : themeEV.opaccityColorMain2
+            }
+
             Text {
                 id: song
                 text: index
-                color: "white"
+                color: themeEV.colorText
                 anchors.centerIn: parent
-                font.pixelSize: 10
+                font.pixelSize: 30
             }
             MouseArea{
                 anchors.fill: parent
                 onPressed: {
+
                     console.log("list view : ", index)
                 }
                 onReleased: {
+
                     lsv.currentIndex = index
                     console.log("list view : ", index)
                 }
@@ -43,5 +56,10 @@ Item {
         anchors.left: parent.left
         anchors.top: parent.top
     }
+
+  AnimatorEV{
+      id: animator
+      tagetAnimator: root
+  }
 
 }
