@@ -16,6 +16,8 @@ class InforSystem : public QObject
     Q_PROPERTY(int Battery READ getBattery WRITE setBattery NOTIFY batteryChanged)
     Q_PROPERTY(QString PathSytemMusic READ getPathSytemMusic)
 
+    Q_PROPERTY(bool isMediaPlay READ getIsMediaPlay WRITE setIsMediaPlay NOTIFY isMediaPlayChanged)
+
 
 public:
     explicit InforSystem(QObject *parent = nullptr);
@@ -26,11 +28,16 @@ public:
     int getBattery();
     void setBattery(int data);
 
+
+    bool getIsMediaPlay();
+    void setIsMediaPlay(bool data);
+
     QString getPathSytemMusic();
 
 
 
 private:
+    bool m_isMediaPlay = false;
     int m_speed = 0;
     int  m_battery = 0;
     QTimer timerSpeed;
@@ -41,6 +48,7 @@ private:
 signals:
     void speedChanged();
     void batteryChanged();
+    void isMediaPlayChanged();
 
 
 public slots:

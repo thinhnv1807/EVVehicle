@@ -28,6 +28,18 @@ void InforSystem::setBattery(int data)
     emit batteryChanged();
 }
 
+bool InforSystem::getIsMediaPlay()
+{
+    return  m_isMediaPlay;
+}
+void InforSystem::setIsMediaPlay(bool data)
+{
+    if(data != m_isMediaPlay){
+        m_isMediaPlay = data;
+        emit isMediaPlayChanged();
+    }
+}
+
 
 
 QString InforSystem::getPathSytemMusic()

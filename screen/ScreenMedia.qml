@@ -10,7 +10,7 @@ Item {
     property string _Media_colorMain: themeEV.colorMain1
     property string _Media_colorComponent:themeEV.colorMain2
 
-    property bool isPlay: false
+    property bool isPlay: myInforEV.isMediaPlay
 
     property int addBtnSize: 30
 
