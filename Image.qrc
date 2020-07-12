@@ -1,12 +1,12 @@
 <RCC>
     <qresource prefix="/">
-        <file>image/climate.png</file>
-        <file>image/seat.png</file>
-        <file>image/setting.png</file>
-        <file>image/weather.png</file>
-        <file>image/climate_p.png</file>
-        <file>image/seat_p.png</file>
-        <file>image/setting_p.png</file>
-        <file>image/weather_p.png</file>
+        <file>image/home/HomeHome.png</file>
+        <file>image/home/homeHomeP.png</file>
+        <file>image/home/homeMedia.png</file>
+        <file>image/home/homeMediaP.png</file>
+        <file>image/home/HomeNavi.png</file>
+        <file>image/home/homeNaviP.png</file>
+        <file>image/home/HomeSet.png</file>
+        <file>image/home/homeSetP.png</file>
     </qresource>
 </RCC>

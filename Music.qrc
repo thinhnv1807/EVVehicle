@@ -1,0 +1,10 @@
+<RCC>
+    <qresource prefix="/">
+        <file>Song/Cam-Nang-Suni-Ha-Linh-RTee.mp3</file>
+        <file>Song/Da-Lo-Yeu-Em-Nhieu-JustaTee.mp3</file>
+        <file>Song/Hon-Ca-Yeu-Duc-Phuc.mp3</file>
+        <file>Song/Mot-Dem-Say-X-Thinh-Suy.mp3</file>
+        <file>Song/Nay-Em-Oi-Minh-Yeu-Thoi-The-Bao-NamKun.mp3</file>
+        <file>Song/Yeu-Em-Moi-Thu-Rick.mp3</file>
+    </qresource>
+</RCC>

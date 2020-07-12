@@ -26,27 +26,27 @@ Item {
     ListModel{
         id: model_source
         ListElement{
-            themeSouce: "qrc:/image/setting.png"
-            themeSouce_p: "qrc:/image/setting_p.png"
+            themeSouce: "qrc:/image/home/HomeHome.png"
+            themeSouce_p: "qrc:/image/home/homeHomeP.png"
             isSource: true
             themeScreen: "qrc:/screen/ScreenHome.qml"
         }
         ListElement{
-            themeSouce: "qrc:/image/weather.png"
-            themeSouce_p: "qrc:/image/weather_p.png"
+            themeSouce: "qrc:/image/home/HomeNavi.png"
+            themeSouce_p: "qrc:/image/home/homeNaviP.png"
             isSource: true
             themeScreen: "qrc:/screen/ScreenMedia.qml"
         }
 
         ListElement{
-            themeSouce: "qrc:/image/seat.png"
-            themeSouce_p: "qrc:/image/seat_p.png"
+            themeSouce: "qrc:/image/home/homeMedia.png"
+            themeSouce_p: "qrc:/image/home/homeMediaP.png"
             isSource: true
             themeScreen: "qrc:/screen/ScreenHome.qml"
         }
         ListElement{
-            themeSouce: "qrc:/image/climate.png"
-            themeSouce_p: "qrc:/image/climate_p.png"
+            themeSouce: "qrc:/image/home/HomeSet.png"
+            themeSouce_p: "qrc:/image/home/homeSetP.png"
             isSource: true
             themeScreen: "qrc:/screen/ScreenClimate.qml"
         }
@@ -57,30 +57,40 @@ Item {
         id: icon
         anchors.bottom: parent.bottom
         height: 80
-        spacing: 150
+        spacing: 180
         anchors.horizontalCenter: parent.horizontalCenter
         Repeater{
             model: model_source
-            Image {
-                id:img
-                source: themeSouce
-                height: sourceSize.height
-                width: sourceSize.width
+            Item{
+                id: btn
+                height: 70
+                width: 70
                 anchors.verticalCenter: parent.verticalCenter
-                visible: isSource
-                MouseArea{
-                    anchors.fill: parent
-                    onPressed: {
-                        img.source = themeSouce_p
-                        console.log("button: ",  themeSouce_p)
-                    }
-                    onReleased: {
-                        img.source = themeSouce
-                        console.log("button: ",  themeSouce)
-                        themeEV.screenEV = themeScreen
+                Image {
+                    id:img
+                    source: themeSouce
+                    height:(mou.pressed)? 100 : 50
+                    width: (mou.pressed)? 100 : 50
+                    anchors.centerIn: parent
+                    visible: isSource
+                    MouseArea{
+                        id: mou
+                        anchors.fill: parent
+                        onPressed: {
+                            img.source = themeSouce_p
+                            console.log("button: ",  themeSouce_p)
+                        }
+                        onReleased: {
+                            img.source = themeSouce
+                            console.log("button: ",  themeSouce)
+                            themeEV.screenEV = themeScreen
+                        }
                     }
                 }
+
+
             }
+
         }
     }
 

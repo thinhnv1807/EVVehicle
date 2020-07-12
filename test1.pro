@@ -21,6 +21,7 @@ SOURCES += \
 
 RESOURCES += qml.qrc \
     Image.qrc \
+    Music.qrc \
 
 # Additional import path used to resolve QML modules in Qt Creator's code model
 QML_IMPORT_PATH =
@@ -47,49 +48,6 @@ DISTFILES += \
     android/gradlew \
     android/gradlew.bat \
     android/res/values/libs.xml \
-    music/Cam-Nang-Suni-Ha-Linh-RTee.mp3 \
-    music/Cam-Nang-Suni-Ha-Linh-RTee.mp3 \
-    music/Cam-Nang-Suni-Ha-Linh-RTee.mp3 \
-    music/Da-Lo-Yeu-Em-Nhieu-JustaTee.mp3 \
-    music/Da-Lo-Yeu-Em-Nhieu-JustaTee.mp3 \
-    music/Da-Lo-Yeu-Em-Nhieu-JustaTee.mp3 \
-    music/Hon-Ca-Yeu-Duc-Phuc.mp3 \
-    music/Hon-Ca-Yeu-Duc-Phuc.mp3 \
-    music/Hon-Ca-Yeu-Duc-Phuc.mp3 \
-    music/Mot-Dem-Say-X-Thinh-Suy.mp3 \
-    music/Mot-Dem-Say-X-Thinh-Suy.mp3 \
-    music/Mot-Dem-Say-X-Thinh-Suy.mp3 \
-    music/Nay-Em-Oi-Minh-Yeu-Thoi-The-Bao-NamKun.mp3 \
-    music/Nay-Em-Oi-Minh-Yeu-Thoi-The-Bao-NamKun.mp3 \
-    music/Nay-Em-Oi-Minh-Yeu-Thoi-The-Bao-NamKun.mp3 \
-    music/Nguoi-Em-Thich-La-Anh-TYU (1).mp3 \
-    music/Nguoi-Em-Thich-La-Anh-TYU (1).mp3 \
-    music/Nguoi-Em-Thich-La-Anh-TYU (1).mp3 \
-    music/Nguoi-Em-Thich-La-Anh-TYU (1).mp3 \
-    music/Nguoi-Em-Thich-La-Anh-TYU (1).mp3 \
-    music/Nguoi-Em-Thich-La-Anh-TYU (1).mp3 \
-    music/Nguoi-Em-Thich-La-Anh-TYU (1).mp3 \
-    music/Nguoi-Em-Thich-La-Anh-TYU.mp3 \
-    music/Nguoi-Em-Thich-La-Anh-TYU.mp3 \
-    music/Nguoi-Em-Thich-La-Anh-TYU.mp3 \
-    music/Nguoi-Yeu-Toi-Khong-Biet-Nau-An-Kim-Trung-Gold-K.mp3 \
-    music/Nguoi-Yeu-Toi-Khong-Biet-Nau-An-Kim-Trung-Gold-K.mp3 \
-    music/Nguoi-Yeu-Toi-Khong-Biet-Nau-An-Kim-Trung-Gold-K.mp3 \
-    music/Thay-La-Yeu-Thuong-OnlyC-Lou-Hoang.mp3 \
-    music/Thay-La-Yeu-Thuong-OnlyC-Lou-Hoang.mp3 \
-    music/Thay-La-Yeu-Thuong-OnlyC-Lou-Hoang.mp3 \
-    music/Thich-Duoc-Khong-Khanh-Chi-Nhun-Nhun.mp3 \
-    music/Thich-Duoc-Khong-Khanh-Chi-Nhun-Nhun.mp3 \
-    music/Thich-Duoc-Khong-Khanh-Chi-Nhun-Nhun.mp3 \
-    music/Thu-Ngo-14C-T2K4.mp3 \
-    music/Thu-Ngo-14C-T2K4.mp3 \
-    music/Thu-Ngo-14C-T2K4.mp3 \
-    music/Yeu-Em-Moi-Thu-Rick.mp3 \
-    music/Yeu-Em-Moi-Thu-Rick.mp3 \
-    music/Yeu-Em-Moi-Thu-Rick.mp3 \
-    music/Yeu-Nhieu-Ghen-Nhieu-Thanh-Hung.mp3 \
-    music/Yeu-Nhieu-Ghen-Nhieu-Thanh-Hung.mp3 \
-    music/Yeu-Nhieu-Ghen-Nhieu-Thanh-Hung.mp3
 
 ANDROID_PACKAGE_SOURCE_DIR = $$PWD/android
 android: include(C:/Users/LENOVO/Downloads/OPENSSL/android_openssl-master/android_openssl-master/openssl.pri)

@@ -33,21 +33,7 @@ Window {
         anchors.left: parent.left
     }
 
-
-    MediaPlayer{
-        id: pler
-        source: myInforEV.PathSytemMusic + "Cam-Nang-Suni-Ha-Linh-RTee.mp3"
-    }
-
-    property int  diration: pler.status
-     onDirationChanged: {
-         console.log( "status"  ,pler.duration)
-     }
-
-
-
 Component.onCompleted: {
-    pler.play()
     console.log("run main", pler.error)
     console.log("status", pler.status)
 }
