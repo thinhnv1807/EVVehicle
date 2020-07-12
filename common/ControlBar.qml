@@ -35,7 +35,7 @@ Item {
             themeSouce: "qrc:/image/weather.png"
             themeSouce_p: "qrc:/image/weather_p.png"
             isSource: true
-            themeScreen: "qrc:/screen/ScreenClimate.qml"
+            themeScreen: "qrc:/screen/ScreenMedia.qml"
         }
 
         ListElement{

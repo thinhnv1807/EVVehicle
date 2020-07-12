@@ -5,7 +5,6 @@ Item {
     property int  durationAnimator: 300
     property bool runAnimator: true
 
-
     OpacityAnimator {
         target: tagetAnimator
         from: 0
@@ -16,7 +15,7 @@ Item {
 
     XAnimator {
         target: tagetAnimator
-        from: tagetAnimator.width/2
+        from: tagetAnimator.width
         to: 0
         duration: durationAnimator
         running: runAnimator

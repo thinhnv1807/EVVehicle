@@ -5,12 +5,16 @@
 #include <QTimer>
 #include <QDebug>
 #include <QList>
+#include <QStandardPaths>
+#include <QtMultimedia/QAudioOutput>
+#include <QFile>
 
 class InforSystem : public QObject
 {
     Q_OBJECT
     Q_PROPERTY(int Speed READ getSpeed WRITE setSpeed NOTIFY speedChanged)
     Q_PROPERTY(int Battery READ getBattery WRITE setBattery NOTIFY batteryChanged)
+    Q_PROPERTY(QString PathSytemMusic READ getPathSytemMusic)
 
 
 public:
@@ -22,6 +26,8 @@ public:
     int getBattery();
     void setBattery(int data);
 
+    QString getPathSytemMusic();
+
 
 
 private:
@@ -31,16 +37,17 @@ private:
     QTimer timerBattery;
     int temp = 20; //fake speed
     int temp1; // fake battery
-
-
+    QString m_pathSytemMusic = QStandardPaths::locate(QStandardPaths::MusicLocation, QString(), QStandardPaths::LocateDirectory);
 signals:
     void speedChanged();
     void batteryChanged();
+
 
 public slots:
     void setTimer(); // fake
     void setSpeedValue(); // fake
     void setBatteryValue(); //fake
+
 
 
 

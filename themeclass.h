@@ -21,10 +21,12 @@ class Themeclass: public QObject
     Q_PROPERTY(QString colorMain2           READ colorMain2        )
     Q_PROPERTY(QString colorMain1           READ colorMain1        )
     Q_PROPERTY(QString colorText            READ colorText         )
+    Q_PROPERTY(QString colorTranfer            READ colorTranfer   )
     QString colorText         () {return "#D1D0D2";}
     QString colorMain1        () {return "#2E2D2E";}
     QString colorMain2        () {return "#D1D0D2";}
     QString textFont          () {return "Arial";}
+    QString colorTranfer      () {return "#00000000";}
     /*------------------------------------screen size------------------------------------------*/
 
     Q_PROPERTY(int fullScreenH           READ fullScreenH        )

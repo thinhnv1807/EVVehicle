@@ -1,6 +1,8 @@
 import QtQuick 2.0
 import QtMultimedia 5.0
 import "../common"
+import QtMultimedia 5.2
+
 
 
 
@@ -9,6 +11,7 @@ Item {
     visible: true
     width: 910
     height: 600
+
 
     ListView{
         id:lsv
@@ -19,8 +22,8 @@ Item {
         clip: true
         snapMode: ListView.SnapOneItem
 
-        highlight: Rectangle{height: dlg.height; width: dlg.width ; color: themeEV.colorMain2; opacity: 0.3}
-        highlightMoveDuration : 150
+        highlight: Rectangle{height: dlg.height; width: dlg.width ; color: themeEV.colorMain2; opacity: 0.1}
+        highlightMoveDuration : 250
         delegate: Item{
             id: dlg
             height: 100
@@ -57,9 +60,18 @@ Item {
         anchors.top: parent.top
     }
 
-  AnimatorEV{
-      id: animator
-      tagetAnimator: root
-  }
+
+
+
+
+
+    AnimatorEV{
+        id: animator
+        tagetAnimator: root
+    }
+
+    Component.onCompleted: {
+        console.log("thinh2 : " , myInforEV.PathSytemMusic)
+    }
 
 }

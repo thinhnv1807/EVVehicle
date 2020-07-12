@@ -12,5 +12,6 @@
         <file>screen/ScreenClimate.qml</file>
         <file>common/ControlBar.qml</file>
         <file>common/AnimatorEV.qml</file>
+        <file>screen/ScreenMedia.qml</file>
     </qresource>
 </RCC>

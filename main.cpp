@@ -9,6 +9,8 @@
 #include <QDir>
 #include <QList>
 #include <QDebug>
+#include <QtMultimedia/QAudioOutput>
+
 
 int main(int argc, char *argv[])
 {
@@ -26,6 +28,8 @@ int main(int argc, char *argv[])
     context->setContextProperty("myclockEV" , &clockEV);
     context->setContextProperty("myInforEV" , &inforEV);
     context->setContextProperty("themeEV", &theme);
+   // QString homeLocation = QStandardPaths::locate(QStandardPaths::MusicLocation, QString(), QStandardPaths::LocateDirectory);
+
 
 
     engine.load("qrc:/main.qml");
