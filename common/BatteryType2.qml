@@ -6,9 +6,9 @@ Item {
     height: 200
 
     property double _bat_value: myInforEV.Battery
-    property double _bat_opacity: 0.5
-    property string _bat_color_component:themeEV.colorMain2
-    property string _bat_color_value:(_bat_value > 20) ? "#3AF3A3" : "red"
+    property double _bat_opacity: themeEV.opaccityColorMain2
+    property string _bat_color_component:themeEV.colorComponent
+    property string _bat_color_value:(_bat_value > 20) ? "#98F0F9" : "red"
 
     Rectangle{
         id: bat_value

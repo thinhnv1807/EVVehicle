@@ -7,7 +7,7 @@ Item {
     property double _bat_value: 1
     property double _bat_opacity: 0.5
     property string _bat_color_component:"#D1D0D2"
-    property string _bat_color_value:"#3AF3A3"
+    property string _bat_color_value:"#39ACE7"
 
     Rectangle{
         id:battery_value

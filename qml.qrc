@@ -9,9 +9,11 @@
         <file>screen/ScreenHome.qml</file>
         <file>common/MapEV.qml</file>
         <file>common/TextEV.qml</file>
-        <file>screen/ScreenClimate.qml</file>
+        <file>screen/ScreenSetting.qml</file>
         <file>common/ControlBar.qml</file>
         <file>common/AnimatorEV.qml</file>
+        <file>screen/ScreenNavi.qml</file>
         <file>screen/ScreenMedia.qml</file>
+        <file>common/ButtonEV.qml</file>
     </qresource>
 </RCC>

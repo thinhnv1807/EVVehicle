@@ -24,7 +24,7 @@ Item {
             center: QtPositioning.coordinate(21.028511, 105.804817) // hanoi
             zoomLevel: 17
 
-            //activeMapType: MapType.GrayStreetMap
+
         }
 
     }
@@ -32,13 +32,13 @@ Item {
 
 
 
-    Rectangle{
-        id: rec1
-        height: 15
-        width: parent.width
-        color: "#2E2D2E"
-        anchors.bottom: parent.bottom
-    }
+//    Rectangle{
+//        id: rec1
+//        height: 15
+//        width: parent.width
+//        color: "#2E2D2E"
+//        anchors.bottom: parent.bottom
+//    }
 
 
 

@@ -8,5 +8,13 @@
         <file>image/home/homeNaviP.png</file>
         <file>image/home/HomeSet.png</file>
         <file>image/home/homeSetP.png</file>
+        <file>image/media/MediaBackmdpi.png</file>
+        <file>image/media/MediaBackPmdpi.png</file>
+        <file>image/media/MediaNext_1mdpi.png</file>
+        <file>image/media/MediaNextmdpi.png</file>
+        <file>image/media/mediaPausemdpi.png</file>
+        <file>image/media/mediaPausePmdpi.png</file>
+        <file>image/media/MediaPlaymdpi.png</file>
+        <file>image/media/MediaPlayPmdpi.png</file>
     </qresource>
 </RCC>

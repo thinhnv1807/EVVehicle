@@ -4,7 +4,7 @@ Text {
     id: clok
     property double _clock_opacity: themeEV.opacityText
     property string _clock_olor_main: themeEV.colorMain1
-    property string _clock_color_component:themeEV.colorMain2
+    property string _clock_color_component:themeEV.colorText
 
     text: myclockEV.clock
     font.wordSpacing: 1.1

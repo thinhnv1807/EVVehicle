@@ -62,16 +62,13 @@ Item {
 
 
 
-
-
-
     AnimatorEV{
         id: animator
         tagetAnimator: root
     }
 
     Component.onCompleted: {
-        console.log("thinh2 : " , myInforEV.PathSytemMusic)
+
     }
 
 }

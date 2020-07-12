@@ -30,8 +30,6 @@ Item {
             id:speed
             anchors.left: infor.left
             anchors.leftMargin: (infor.width - width)/2
-            _speed_color_component: _home_colorComponent
-            _speed_opacity_text: _home_opacity_text
         }
 
         BatteryType2{
@@ -41,7 +39,7 @@ Item {
             anchors.top: parent.top
             anchors.topMargin: 172
             anchors.left: infor.left
-            anchors.leftMargin: 93
+            anchors.leftMargin: 20
         }
     }
 

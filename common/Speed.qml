@@ -4,9 +4,6 @@ Item{
     id: speed
     height:100
     width: speed_val.contentWidth + speed_unit.contentWidth + 6
-    property string  _speed_color_component: ""
-    property double  _speed_opacity_text: 0
-
     TextEV {
         id: speed_val
         text: myInforEV.Speed

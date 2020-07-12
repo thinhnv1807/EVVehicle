@@ -4,7 +4,7 @@ Text {
     id: root
     property double _textEV_opacity: themeEV.opacityText
     property string _textEV_olor_main: themeEV.colorMain1
-    property string _textEV_color_component:themeEV.colorMain2
+    property string _textEV_color_component:themeEV.colorText
     font.wordSpacing: 1.1
     fontSizeMode: Text.FixedSize
     wrapMode: Text.NoWrap
