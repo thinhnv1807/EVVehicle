@@ -1,4 +1,4 @@
-import QtQuick 2.0
+import QtQuick 2.12
 import "../common"
 Item {
     id: root
@@ -14,7 +14,6 @@ Item {
     AnimatorEV{
         id: animator
         tagetAnimator: root
-        durationAnimator: 150
     }
 
 }

@@ -25,13 +25,6 @@ Window {
         height: 602
         anchors.top: parent.top
         anchors.left: parent.left
-
-//        MouseArea{
-//            anchors.fill: parent
-//            onPressed: {
-//                play1.play()
-//            }
-//        }
     }
 
     ControlBar{
@@ -40,15 +33,9 @@ Window {
         anchors.left: parent.left
     }
 
-
-    MediaPlayer{
-        id: play1
-        source: "qrc:/Song/Cam-Nang-Suni-Ha-Linh-RTee.mp3"
-    }
-
 Component.onCompleted: {
      console.log(play1.source)
-
+    console.log("thinh" ,myInforEV.PathSytemMusic)
 }
 
 }

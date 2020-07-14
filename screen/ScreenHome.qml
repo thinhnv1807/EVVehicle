@@ -1,6 +1,8 @@
 import QtQuick 2.12
 import QtQuick.Window 2.12
 import "../common"
+import QtGraphicalEffects 1.0
+
 
 Item {
     id:root
@@ -41,6 +43,15 @@ Item {
             anchors.left: infor.left
             anchors.leftMargin: 20
         }
+
+        ShadowEV{
+            shadowFor: speed
+        }
+
+        ShadowEV{
+            shadowFor: bat
+        }
+
     }
 
     Item {
@@ -63,6 +74,8 @@ Item {
         id: animtor
         tagetAnimator: root
     }
+
+
 
 
     Component.onCompleted: {

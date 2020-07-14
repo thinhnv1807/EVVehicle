@@ -1,4 +1,4 @@
-import QtQuick 2.0
+import QtQuick 2.12
 
 Item {
     id: root
@@ -13,6 +13,7 @@ Item {
     Image {
         id: btnImg
         source: ""
+        mipmap: true
         height: parent.height
         width: parent.width
         anchors.centerIn: parent

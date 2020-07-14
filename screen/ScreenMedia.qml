@@ -1,8 +1,10 @@
-import QtQuick 2.0
+import QtQuick 2.12
 import "../common"
 import QtMultimedia 5.12
+import QtGraphicalEffects 1.0
 
 Item {
+    id: root
     width: 910
     height: 600
     property double _Media_opacity_text: themeEV.opacityText
@@ -23,12 +25,24 @@ Item {
     property var minDuration: Math.floor((msDuration/1000/60) << 0)
     property var secDuration: Math.floor((msDuration/1000) % 60)
 
-
-    MediaPlayer{
-        id: play1
-        source: "qrc:/Song/Cam-Nang-Suni-Ha-Linh-RTee.mp3"
+    ListModelMediaEV{
+        id: modelMedia
     }
 
+    MediaPlayer{
+        id:play1
+        source: "qrc:/Song/Mot-Dem-Say-X-Thinh-Suy.mp3"
+    }
+
+    Rectangle{
+        id: mediaImg
+        height: 320
+        width: 320
+        color: themeEV.colorMain2
+        anchors.horizontalCenter: parent.horizontalCenter
+        anchors.top: parent.top
+        anchors.topMargin: 70
+    }
 
 
     Item{
@@ -37,7 +51,7 @@ Item {
         width: 500
         anchors.horizontalCenter: parent.horizontalCenter
         anchors.bottom: controlPlayer.top
-        anchors.bottomMargin: 20
+        anchors.bottomMargin: 30
 
         Rectangle{
             id: bgrBar
@@ -46,14 +60,14 @@ Item {
             color: "black"
         }
 
-
         Rectangle{
             id: barL
-            height: parent.height
+            height: 5
             width: (play1.position/play1.duration)*parent.width
             color: "#98F0F9"
+            radius: 5
+            anchors.verticalCenter: parent.verticalCenter
         }
-
     }
 
 
@@ -80,7 +94,7 @@ Item {
         height: 50
         width: 400
         anchors.bottom: parent.bottom
-        anchors.bottomMargin: 30
+        anchors.bottomMargin: 50
         anchors.horizontalCenter: parent.horizontalCenter
 
         ButtonEV{
@@ -100,8 +114,8 @@ Item {
             anchors.horizontalCenter: parent.horizontalCenter
             anchors.verticalCenter: parent.verticalCenter
             btnBgr: (isPlay == false ) ?
-                                     (  (btnMou.pressed)     ? "qrc:/image/media/MediaPlayPmdpi.png"  : "qrc:/image/media/MediaPlaymdpi.png")
-                                   : (  (btnMou.pressed)     ? "qrc:/image/media/mediaPausePmdpi.png" : "qrc:/image/media/mediaPausemdpi.png")
+                        (  (btnMou.pressed)     ? "qrc:/image/media/MediaPlayPmdpi.png"  : "qrc:/image/media/MediaPlaymdpi.png")
+                      : (  (btnMou.pressed)     ? "qrc:/image/media/mediaPausePmdpi.png" : "qrc:/image/media/mediaPausemdpi.png")
             btnMou.onReleased: {
                 isPlay =  !isPlay
                 isPlay ? play1.play(): play1.pause()
@@ -118,5 +132,28 @@ Item {
             anchors.verticalCenter: parent.verticalCenter
             btnBgr: (btnMou.pressed) ?"qrc:/image/media/MediaNext_1mdpi.png": "qrc:/image/media/MediaNextmdpi.png"
         }
+
+    }
+
+    ShadowEV{
+        shadowFor: controlPlayer
+    }
+
+    ShadowEV{
+        shadowFor: bar
+    }
+
+    ShadowEV{
+        shadowFor: mediaImg
+    }
+
+
+
+
+
+
+    AnimatorEV{
+        id: animator
+        tagetAnimator: root
     }
 }

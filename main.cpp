@@ -10,6 +10,7 @@
 #include <QList>
 #include <QDebug>
 #include <QtMultimedia/QAudioOutput>
+#include <QFileInfo>
 
 
 int main(int argc, char *argv[])
@@ -28,11 +29,21 @@ int main(int argc, char *argv[])
     context->setContextProperty("myclockEV" , &clockEV);
     context->setContextProperty("myInforEV" , &inforEV);
     context->setContextProperty("themeEV", &theme);
-   // QString homeLocation = QStandardPaths::locate(QStandardPaths::MusicLocation, QString(), QStandardPaths::LocateDirectory);
+    /////////////////////////////////demo///////////////////////////////////////
+//    QStringList dataList;
+//    QDir dir(inforEV.getPathSytemMusic());
+//    dir.setFilter(QDir::Files);
+//    QFileInfoList list = dir.entryInfoList();
+//    for (int i = 0; i < list.size(); ++i) {
+//        QFileInfo fileInfo = list.at(i);
+//        dataList << fileInfo.filePath();
+//    }
+//    context->setContextProperty("myModel", QVariant::fromValue(dataList));
 
-
-
+    /////////////////////////////////////////////////////////////////////////
     engine.load("qrc:/main.qml");
 
     return app.exec();
 }
+
+

@@ -1,4 +1,4 @@
-import QtQuick 2.0
+import QtQuick 2.11
 
 Item {
     id: root
@@ -79,6 +79,7 @@ Item {
                     height:(mou.pressed)? 80 : ((root.currentIndex == index) ? 80 : 50 )
                     width: (mou.pressed)? 80 :((root.currentIndex == index) ? 80 : 50 )
                     anchors.centerIn: parent
+                    mipmap: true
                 }
 
                 MouseArea{

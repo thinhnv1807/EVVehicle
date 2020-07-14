@@ -1,10 +1,7 @@
-import QtQuick 2.0
+import QtQuick 2.12
 import QtMultimedia 5.0
 import "../common"
-import QtMultimedia 5.2
-
-
-
+import QtGraphicalEffects 1.0
 
 Item {
     id:root
@@ -18,7 +15,7 @@ Item {
         height: 600
         width: 300
         spacing: 2
-        model: 10
+        model: myModel//10
         clip: true
         snapMode: ListView.SnapOneItem
 
@@ -38,7 +35,7 @@ Item {
 
             Text {
                 id: song
-                text: index
+                text: index + modelData
                 color: themeEV.colorText
                 anchors.centerIn: parent
                 font.pixelSize: 30
@@ -59,7 +56,6 @@ Item {
         anchors.left: parent.left
         anchors.top: parent.top
     }
-
 
 
     AnimatorEV{
