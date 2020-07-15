@@ -13,6 +13,7 @@
 #include <QFileInfo>
 
 
+
 int main(int argc, char *argv[])
 {
 
@@ -30,18 +31,18 @@ int main(int argc, char *argv[])
     context->setContextProperty("myInforEV" , &inforEV);
     context->setContextProperty("themeEV", &theme);
     /////////////////////////////////demo///////////////////////////////////////
-//    QStringList dataList;
-//    QDir dir(inforEV.getPathSytemMusic());
-//    dir.setFilter(QDir::Files);
-//    QFileInfoList list = dir.entryInfoList();
-//    for (int i = 0; i < list.size(); ++i) {
-//        QFileInfo fileInfo = list.at(i);
-//        dataList << fileInfo.filePath();
-//    }
-//    context->setContextProperty("myModel", QVariant::fromValue(dataList));
+    QStringList dataList;
+    QDir dir(inforEV.getPathSytemMusic());
+    dir.setFilter(QDir::Files);
+    QFileInfoList list = dir.entryInfoList();
+    for (int i = 0; i < list.size(); ++i) {
+        QFileInfo fileInfo =  list.at(i);
+        dataList << fileInfo.absoluteFilePath();
+    }
+    context->setContextProperty("myModel", QVariant::fromValue(dataList));
 
     /////////////////////////////////////////////////////////////////////////
-    engine.load("qrc:/main.qml");
+     engine.load("qrc:/main.qml");
 
     return app.exec();
 }

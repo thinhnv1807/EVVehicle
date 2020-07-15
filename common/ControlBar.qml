@@ -82,6 +82,10 @@ Item {
                     mipmap: true
                 }
 
+                ShadowEV{
+                    shadowFor: img
+                }
+
                 MouseArea{
                     id: mou
                     anchors.fill: parent

@@ -71,16 +71,8 @@ Item {
     }
 
     AnimatorEV{
-        id: animtor
+        id: animator
         tagetAnimator: root
     }
-
-
-
-
-    Component.onCompleted: {
-
-    }
-
 }
 

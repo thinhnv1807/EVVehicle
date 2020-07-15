@@ -13,9 +13,9 @@ Item {
     ListView{
         id:lsv
         height: 600
-        width: 300
+        width: 700
         spacing: 2
-        model: myModel//10
+        model: myModel
         clip: true
         snapMode: ListView.SnapOneItem
 
@@ -24,7 +24,7 @@ Item {
         delegate: Item{
             id: dlg
             height: 100
-            width: 300
+            width: lsv.width
             Rectangle{
                 id: r1
                 height: dlg.height
@@ -35,10 +35,10 @@ Item {
 
             Text {
                 id: song
-                text: index + modelData
+                text:  modelData
                 color: themeEV.colorText
                 anchors.centerIn: parent
-                font.pixelSize: 30
+                font.pixelSize: 15
             }
             MouseArea{
                 anchors.fill: parent
@@ -49,7 +49,7 @@ Item {
                 onReleased: {
 
                     lsv.currentIndex = index
-                    console.log("list view : ", index)
+                    console.log("list view : ", modelData )
                 }
             }
         }
