@@ -28,25 +28,17 @@ Item {
 
 
 
-
         ListModelMediaEV{
             id: modelMedia
         }
 
         MediaPlayer{
             id:play1
-            source: "qrc:/Song/Mot-Dem-Say-X-Thinh-Suy.mp3"
-        }
 
-        Rectangle{
-            id: mediaImg
-            height: 320
-            width: 320
-            radius: 3
-            color: themeEV.colorMain2
-            anchors.horizontalCenter: parent.horizontalCenter
-            anchors.top: parent.top
-            anchors.topMargin: 70
+            onSourceChanged: {
+                console.log(play1.metaData.title)
+            }
+
         }
 
 
@@ -109,7 +101,7 @@ Item {
                 width:(btnMou.pressed) ? (parent.height + addBtnSize): parent.height
                 anchors.left: parent.left
                 anchors.verticalCenter: parent.verticalCenter
-                btnBgr: (btnMou.pressed) ?  "qrc:/image/media/MediaBackPmdpi.png" : "qrc:/image/media/MediaBackmdpi.png"
+                btnBgr: (btnMou.pressed) ?  "qrc:/image/media/MediaBackPmdpi.svg" : "qrc:/image/media/MediaBackmdpi.svg"
             }
 
 
@@ -120,12 +112,14 @@ Item {
                 anchors.horizontalCenter: parent.horizontalCenter
                 anchors.verticalCenter: parent.verticalCenter
                 btnBgr: (isPlay == false ) ?
-                            (  (btnMou.pressed)     ? "qrc:/image/media/MediaPlayPmdpi.png"  : "qrc:/image/media/MediaPlaymdpi.png")
-                          : (  (btnMou.pressed)     ? "qrc:/image/media/mediaPausePmdpi.png" : "qrc:/image/media/mediaPausemdpi.png")
+                            (  (btnMou.pressed)     ? "qrc:/image/media/MediaPlayPmdpi.svg"  : "qrc:/image/media/MediaPlaymdpi.svg")
+                          : (  (btnMou.pressed)     ? "qrc:/image/media/mediaPausePmdpi.svg" : "qrc:/image/media/mediaPausemdpi.svg")
                 btnMou.onReleased: {
                     isPlay =  !isPlay
                     isPlay ? play1.play(): play1.pause()
                 }
+
+
 
             }
 
@@ -136,10 +130,90 @@ Item {
                 width: (btnMou.pressed) ? (parent.height + addBtnSize): parent.height
                 anchors.right: parent.right
                 anchors.verticalCenter: parent.verticalCenter
-                btnBgr: (btnMou.pressed) ?"qrc:/image/media/MediaNext_1mdpi.png": "qrc:/image/media/MediaNextmdpi.png"
+                btnBgr: (btnMou.pressed) ?"qrc:/image/media/MediaNext_1mdpi.svg": "qrc:/image/media/MediaNextmdpi.svg"
             }
 
         }
+
+
+        Rectangle{
+            id: mediaImg
+            height: 320
+            width: 320
+            radius: 3
+            color: themeEV.colorMain2
+            anchors.horizontalCenter: parent.horizontalCenter
+            anchors.top: parent.top
+            anchors.topMargin: 70
+        }
+
+
+
+        PathView {
+                id: pathView
+                height: 300
+                width: 910
+                anchors.top: mediaImg.top
+                z:1
+                model: myModel
+
+                delegate: Rectangle {
+                    id: item
+                    height: 300
+                    width: 300
+
+                    border.width: 5
+                    border.color: "#2f2f2f"
+                    color: themeEV.colorMain2
+
+                    scale: PathView.itemscale
+                    z: PathView.z
+
+                    TextEV{
+                        text: "Song title"
+                        anchors.centerIn: parent
+                    }
+
+                    MouseArea{
+                        anchors.fill: parent
+                        onReleased: {
+                            play1.source = "file://" + modelData
+                            if(isPlay){play1.play()}
+                        }
+                    }
+                }
+
+                interactive: true
+
+                pathItemCount: 3
+                preferredHighlightEnd: 0.5
+                preferredHighlightBegin: 0.5
+
+                path: Path {
+                    startX: 0
+                    startY: pathView.height * 0.5
+
+                    PathAttribute { name: "z"; value: 0 }
+                    PathAttribute { name: "itemscale"; value: 0.5 }
+
+                    PathLine {
+                        x: pathView.width * 0.5
+                        y: pathView.height * 0.5
+                    }
+
+                    PathAttribute { name: "z"; value: 100 }
+                    PathAttribute { name: "itemscale"; value: 1 }
+
+                    PathLine {
+                        x: pathView.width
+                        y: pathView.height * 0.5
+                    }
+
+                    PathAttribute { name: "z"; value: 0 }
+                    PathAttribute { name: "itemscale"; value: 0.5 }
+                }
+            }
+
 
         ShadowEV{
             shadowFor: controlPlayer

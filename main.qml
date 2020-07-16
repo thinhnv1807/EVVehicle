@@ -15,9 +15,7 @@ Window {
     visibility: Window.FullScreen
 
     property string screen: themeEV.screenEV
-    onScreenChanged: {
-        animator.runAnimator
-    }
+
 
     MainScreen{
         id:scr
