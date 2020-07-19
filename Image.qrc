@@ -1,20 +1,20 @@
 <RCC>
     <qresource prefix="/">
-        <file>image/home/HomeHome.png</file>
-        <file>image/home/homeHomeP.png</file>
-        <file>image/home/homeMedia.png</file>
-        <file>image/home/homeMediaP.png</file>
-        <file>image/home/HomeNavi.png</file>
-        <file>image/home/homeNaviP.png</file>
-        <file>image/home/HomeSet.png</file>
-        <file>image/home/homeSetP.png</file>
-        <file>image/media/MediaBackmdpi.png</file>
-        <file>image/media/MediaBackPmdpi.png</file>
-        <file>image/media/MediaNext_1mdpi.png</file>
-        <file>image/media/MediaNextmdpi.png</file>
-        <file>image/media/mediaPausemdpi.png</file>
-        <file>image/media/mediaPausePmdpi.png</file>
-        <file>image/media/MediaPlaymdpi.png</file>
-        <file>image/media/MediaPlayPmdpi.png</file>
+        <file>image/home/CTR_home.png</file>
+        <file>image/home/CTR_home_p.png</file>
+        <file>image/home/CTR_music.png</file>
+        <file>image/home/CTR_music_p.png</file>
+        <file>image/home/CTR_navi.png</file>
+        <file>image/home/CTR_navi_p.png</file>
+        <file>image/home/CTR_set.png</file>
+        <file>image/home/CTR_set_p.png</file>
+        <file>image/media/media_back.png</file>
+        <file>image/media/media_back_p.png</file>
+        <file>image/media/media_next.png</file>
+        <file>image/media/media_next_p.png</file>
+        <file>image/media/media_pause.png</file>
+        <file>image/media/media_pause_p.png</file>
+        <file>image/media/media_play.png</file>
+        <file>image/media/media_play_p.png</file>
     </qresource>
 </RCC>

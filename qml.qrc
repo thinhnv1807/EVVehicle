@@ -15,7 +15,6 @@
         <file>screen/ScreenNavi.qml</file>
         <file>screen/ScreenMedia.qml</file>
         <file>common/ButtonEV.qml</file>
-        <file>common/ListModelMediaEV.qml</file>
         <file>common/ListViewMediaEV.qml</file>
         <file>common/ShadowEV.qml</file>
     </qresource>

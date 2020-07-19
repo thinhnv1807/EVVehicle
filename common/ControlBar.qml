@@ -32,27 +32,27 @@ Item {
     ListModel{
         id: model_source
         ListElement{
-            themeSouce: "qrc:/image/home/HomeHome.png"
-            themeSouce_p: "qrc:/image/home/homeHomeP.png"
+            themeSouce: "qrc:/image/home/CTR_home.png"
+            themeSouce_p: "qrc:/image/home/CTR_home_p.png"
             isSource: 0
             themeScreen: "qrc:/screen/ScreenHome.qml"
         }
         ListElement{
-            themeSouce: "qrc:/image/home/HomeNavi.png"
-            themeSouce_p: "qrc:/image/home/homeNaviP.png"
+            themeSouce: "qrc:/image/home/CTR_navi.png"
+            themeSouce_p: "qrc:/image/home/CTR_navi_p.png"
             isSource: 1
             themeScreen: "qrc:/screen/ScreenNavi.qml"
         }
 
         ListElement{
-            themeSouce: "qrc:/image/home/homeMedia.png"
-            themeSouce_p: "qrc:/image/home/homeMediaP.png"
+            themeSouce: "qrc:/image/home/CTR_music.png"
+            themeSouce_p: "qrc:/image/home/CTR_music_p.png"
             isSource: 2
             themeScreen: "qrc:/screen/ScreenMedia.qml"
         }
         ListElement{
-            themeSouce: "qrc:/image/home/HomeSet.png"
-            themeSouce_p: "qrc:/image/home/homeSetP.png"
+            themeSouce: "qrc:/image/home/CTR_set.png"
+            themeSouce_p: "qrc:/image/home/CTR_set_p.png"
             isSource: 3
             themeScreen: "qrc:/screen/ScreenSetting.qml"
         }

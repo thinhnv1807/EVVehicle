@@ -32,12 +32,12 @@ int main(int argc, char *argv[])
     context->setContextProperty("themeEV", &theme);
     /////////////////////////////////demo///////////////////////////////////////
     QStringList dataList;
-    QDir dir(inforEV.getPathSytemMusic());
+    QDir dir("/storage/emulated/0/Music/");
     dir.setFilter(QDir::Files);
     QFileInfoList list = dir.entryInfoList();
     for (int i = 0; i < list.size(); ++i) {
         QFileInfo fileInfo =  list.at(i);
-        dataList << fileInfo.absoluteFilePath();
+        dataList << fileInfo.fileName();
     }
     context->setContextProperty("myModel", QVariant::fromValue(dataList));
 
