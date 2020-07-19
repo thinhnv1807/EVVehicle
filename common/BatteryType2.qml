@@ -24,7 +24,7 @@ Item {
         width: parent.width
         height: parent.height*0.8
         radius: 2
-        color: "#00000000"
+        color: themeEV.colorTranfer
         border.color:_bat_color_component
         border.width: 5
         anchors.bottom: parent.bottom

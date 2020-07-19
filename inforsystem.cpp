@@ -4,7 +4,6 @@ InforSystem::InforSystem(QObject *parent) : QObject(parent)
 {
     temp1 = 30;
     setTimer();
-
 }
 
 void InforSystem::setSpeed(int data)

@@ -96,7 +96,7 @@ Item {
         width: 910
         anchors.top: mediaImg.top
         z:1
-        model: myModel
+        model: MusicList
 
 
         delegate: Item {

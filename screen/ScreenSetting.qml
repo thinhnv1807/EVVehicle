@@ -15,7 +15,7 @@ Item {
         height: 600
         width: 700
         spacing: 2
-        model: myModel
+        model: MusicList
         clip: true
         snapMode: ListView.SnapOneItem
 
@@ -49,7 +49,7 @@ Item {
                 onReleased: {
 
                     lsv.currentIndex = index
-                    console.log("list view : ", modelData )
+                   // console.log("list view : ", modelData )
                 }
             }
         }

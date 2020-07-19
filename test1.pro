@@ -17,6 +17,7 @@ SOURCES += \
         clockev.cpp \
         inforsystem.cpp \
         main.cpp \
+        mediaev.cpp \
         themeclass.cpp
 
 RESOURCES += qml.qrc \
@@ -38,6 +39,7 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 HEADERS += \
     clockev.h \
     inforsystem.h \
+    mediaev.h \
     themeclass.h
 
 DISTFILES += \

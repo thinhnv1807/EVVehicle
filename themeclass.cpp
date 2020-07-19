@@ -2,7 +2,7 @@
 
 Themeclass::Themeclass(QObject *parent) : QObject(parent)
 {
-
+        m_screenEV = "qrc:/screen/ScreenHome.qml"; //default
 }
 
 QString Themeclass::screenEV() const
@@ -17,3 +17,4 @@ void Themeclass::setScreenEV(QString data)
     }
     emit screenEVChanged();
 }
+
