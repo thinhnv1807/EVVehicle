@@ -215,9 +215,7 @@ Item {
         }
     }
 
-    ShadowEV{
-        shadowFor: controlPlayer
-    }
+
 
     ShadowEV{
         shadowFor: bar
