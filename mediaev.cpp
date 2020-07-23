@@ -2,7 +2,8 @@
 
 MediaEV::MediaEV(QObject *parent) : QObject(parent)
 {
-    setListMusic(DIR_MUSIC);
+    m_pathSytemMusic = QStandardPaths::locate(QStandardPaths::MusicLocation, QString(), QStandardPaths::LocateDirectory);
+    setListMusic(m_pathSytemMusic);
 }
 
 QStringList MediaEV::getListMusic()

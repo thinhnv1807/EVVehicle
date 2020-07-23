@@ -5,12 +5,14 @@
 #include <QDebug>
 #include <QFileInfo>
 #include <QObject>
+#include <QStandardPaths>
 
 #define DIR_MUSIC "/storage/emulated/0/Music/"
 
 class MediaEV: public QObject
 {
     Q_OBJECT
+
 
 
 public:
@@ -24,6 +26,7 @@ signals:
     void listMusicChanged();
 private:
     QStringList m_ListMusic;
+    QString m_pathSytemMusic = QStandardPaths::locate(QStandardPaths::MusicLocation, QString(), QStandardPaths::LocateDirectory);
 };
 
 #endif // MEDIAEV_H
